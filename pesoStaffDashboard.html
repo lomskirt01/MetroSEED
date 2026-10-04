@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroSEED - PESO Staff Dashboard</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- FIXED SIDEBAR -->
+    <aside class="dash-sidebar bg-navy text-white d-flex flex-column shadow">
+        <!-- Sidebar Brand -->
+        <div class="sidebar-brand d-flex align-items-center gap-2 p-4">
+            <img src="photos/metro-peso-seal.png" alt="Logo" class="rounded-circle flex-shrink-0" width="32" height="32">
+            <div class="lh-1 sidebar-text overflow-hidden">
+                <div class="fw-bold fs-6 text-truncate">Metro Naga PESO</div>
+                <div class="text-truncate" style="font-size: 0.6rem; color: #a3bced;">Youth Employment Program</div>
+            </div>
+        </div>
+
+        <!-- PESO Staff Profile Badge -->
+        <div class="px-4 mb-4 sidebar-user-wrapper">
+            <div class="sidebar-user-card d-flex align-items-center gap-2 p-2 rounded-3" style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="bg-info text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 32px; height: 32px; font-size: 0.8rem;">
+                    S
+                </div>
+                <div class="lh-sm sidebar-text overflow-hidden">
+                    <div class="fw-bold text-truncate" style="font-size: 0.8rem;">PESO Staff</div>
+                    <div class="text-truncate" style="font-size: 0.65rem; color: #a3def5;">Processing Access</div>
+                </div>
+                <i class="bi bi-chevron-right ms-auto small text-white-50 sidebar-text"></i>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="sidebar-nav flex-grow-1 px-3 overflow-y-auto overflow-x-hidden custom-scrollbar">
+            
+            <div class="nav-section-title">OVERVIEW</div>
+            <a href="#" class="nav-link active"><i class="bi bi-grid-1x2"></i> <span class="sidebar-text">My Dashboard</span></a>
+            <a href="#" class="nav-link"><i class="bi bi-bell"></i> <span class="sidebar-text">Announcements</span></a>
+
+            <div class="nav-section-title mt-4">APPLICANT PROCESSING</div>
+            <a href="#" class="nav-link"><i class="bi bi-file-earmark-check"></i> <span class="sidebar-text">Verify Requirements</span></a>
+            <a href="#" class="nav-link"><i class="bi bi-chat-square-text"></i> <span class="sidebar-text">Encode Interviews</span></a>
+            <a href="#" class="nav-link"><i class="bi bi-person-lines-fill"></i> <span class="sidebar-text">Update Statuses</span></a>
+            <a href="#" class="nav-link"><i class="bi bi-building-add"></i> <span class="sidebar-text">Assign Offices</span></a>
+
+            <div class="nav-section-title mt-4">RECORDS & REPORTS</div>
+            <a href="#" class="nav-link"><i class="bi bi-folder2-open"></i> <span class="sidebar-text">Applicant Masterlist</span></a>
+            <a href="#" class="nav-link"><i class="bi bi-bar-chart"></i> <span class="sidebar-text">Generate Reports</span></a>
+
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="sidebar-footer p-3 mt-auto border-top border-secondary border-opacity-25">
+            <a href="#" id="sidebarCollapseBtn" class="nav-link cursor-pointer">
+                <i class="bi bi-chevron-bar-left fs-5"></i> 
+                <span class="sidebar-text">Collapse sidebar</span>
+            </a>
+            <a href="login.html" class="nav-link text-danger-hover">
+                <i class="bi bi-box-arrow-right fs-5"></i> 
+                <span class="sidebar-text">Sign out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="dash-main-content">
+        
+        <!-- STICKY TOP NAVBAR -->
+        <header class="dash-top-navbar d-flex align-items-center justify-content-between px-4 px-lg-5 bg-white border-bottom shadow-sm">
+            <!-- Left Branding & Toggle -->
+            <div class="d-flex align-items-center gap-2">
+                <button id="sidebarToggleBtn" class="btn btn-link text-dark p-0 me-1 fs-4 text-decoration-none border-0">
+                    <i class="bi bi-list"></i>
+                </button>
+                <img src="photos/metro-seed-logo.png" alt="Logo" width="28" height="28" onerror="this.src='https://via.placeholder.com/28x28/1e428a/ffffff?text=M'">
+                <span class="fw-bold text-navy d-none d-md-block" style="font-size: 0.9rem;">MetroSEED-Naga <span class="fw-normal text-navy">Staff</span></span>
+            </div>
+
+            <!-- Top Nav Links -->
+            <div class="d-none d-lg-flex align-items-center gap-2">
+                <a href="#" class="btn btn-sm text-muted fw-medium px-3">Pending Verification <span class="badge bg-danger rounded-pill ms-1">12</span></a>
+                <a href="#" class="btn btn-sm text-muted fw-medium px-3">Office Placements</a>
+            </div>
+
+            <!-- Top Right Profile & Notifications -->
+            <div class="d-flex align-items-center gap-3">
+                <div class="position-relative">
+                    <button class="btn btn-link text-muted p-0 fs-5"><i class="bi bi-bell"></i></button>
+                </div>
+                <div class="d-flex align-items-center gap-2 border-start ps-3 cursor-pointer">
+                    <div class="bg-info text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 0.8rem;">
+                        S
+                    </div>
+                    <div class="d-none d-md-block lh-sm text-start">
+                        <div class="fw-bold text-dark" style="font-size: 0.75rem;">Staff User 04</div>
+                        <div class="text-muted" style="font-size: 0.65rem;">Processing Access</div>
+                    </div>
+                    <i class="bi bi-chevron-down text-muted small ms-2"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD BODY CONTENT -->
+        <div class="dash-body-container px-4 px-lg-5 py-4">
+            
+            <!-- Welcome Header -->
+            <div class="welcome-banner rounded-4 p-4 mb-4 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+                <div class="position-relative z-2">
+                    <div class="text-uppercase fw-bold text-muted mb-2" style="font-size: 0.7rem; letter-spacing: 1px;">YEP STAFF PORTAL</div>
+                    <h3 class="fw-bold text-dark mb-1">Welcome to your <span class="text-primary">Staff Dashboard</span></h3>
+                    <p class="text-secondary small mb-0">View your daily processing queue and manage applicant statuses.</p>
+                </div>
+                
+                <div class="card border-0 shadow-sm rounded-4 position-relative z-2 d-none d-md-flex" style="min-width: 280px; background: rgba(255,255,255,0.9);">
+                    <div class="card-body p-3 d-flex gap-3 align-items-center">
+                        <div class="bg-light-blue text-primary rounded-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-check2-square fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-muted text-uppercase" style="font-size: 0.65rem; font-weight: 600;">MY DAILY TASKS</div>
+                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">12 Pending Verifications</div>
+                            <div class="text-warning-dark fw-medium" style="font-size: 0.65rem;"><i class="bi bi-circle-fill me-1" style="font-size: 0.4rem;"></i> 8 pending interview encodings</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="banner-bg-shape shape-1"></div>
+                <div class="banner-bg-shape shape-2"></div>
+            </div>
+
+            <!-- Staff Quick Actions -->
+            <div class="row g-3 mb-4">
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card quick-action-card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body p-3 d-flex align-items-center gap-3">
+                            <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-file-earmark-check-fill"></i>
+                            </div>
+                            <div class="fw-semibold text-dark fs-sm lh-sm">Verify Documents</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card quick-action-card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body p-3 d-flex align-items-center gap-3">
+                            <div class="bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-chat-square-text-fill"></i>
+                            </div>
+                            <div class="fw-semibold text-dark fs-sm lh-sm">Encode Interviews</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card quick-action-card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body p-3 d-flex align-items-center gap-3">
+                            <div class="bg-warning-subtle text-warning-dark rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-building-add"></i>
+                            </div>
+                            <div class="fw-semibold text-dark fs-sm lh-sm">Assign Offices</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card quick-action-card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body p-3 d-flex align-items-center gap-3">
+                            <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-file-bar-graph-fill"></i>
+                            </div>
+                            <div class="fw-semibold text-dark fs-sm lh-sm">Generate Reports</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Snapshot Header -->
+            <div class="d-flex justify-content-between align-items-end mb-3 mt-4">
+                <div>
+                    <div class="text-uppercase fw-bold text-primary mb-1" style="font-size: 0.7rem; letter-spacing: 1px;">PROCESSING OVERVIEW</div>
+                    <h5 class="fw-bold text-dark mb-0">Current Queue</h5>
+                </div>
+                <div class="text-muted small">Updated Just Now</div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm h-100 p-3 border-start border-4 border-danger rounded-end">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="stat-icon bg-danger-subtle text-danger"><i class="bi bi-file-earmark-x"></i></div>
+                            <div class="stat-trend text-danger fw-bold px-2 py-1" style="font-size: 0.7rem;">Action Required</div>
+                        </div>
+                        <h3 class="fw-bold text-dark mb-0 mt-3">12</h3>
+                        <div class="text-muted small">Pending Verifications</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm h-100 p-3">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="stat-icon bg-warning-subtle text-warning-dark"><i class="bi bi-mic"></i></div>
+                        </div>
+                        <h3 class="fw-bold text-dark mb-0 mt-3">24</h3>
+                        <div class="text-muted small">Pending Interviews</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm h-100 p-3">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="stat-icon bg-indigo-subtle text-indigo"><i class="bi bi-person-check"></i></div>
+                        </div>
+                        <h3 class="fw-bold text-dark mb-0 mt-3">115</h3>
+                        <div class="text-muted small">Awaiting Office Match</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm h-100 p-3 border-start border-4 border-success rounded-end">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="stat-icon bg-success-subtle text-success"><i class="bi bi-check-all"></i></div>
+                            <div class="stat-trend text-success bg-success-subtle px-2 py-1 rounded-pill fw-bold">Today</div>
+                        </div>
+                        <h3 class="fw-bold text-dark mb-0 mt-3">45</h3>
+                        <div class="text-muted small">Applications Processed</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Tables Area -->
+            <div class="row g-4">
+                
+                <!-- Left Column (Span 8 on Large) -->
+                <div class="col-lg-8">
+                    
+                    <!-- Action Required: Document Verification Queue -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h6 class="fw-bold mb-1"><i class="bi bi-exclamation-circle text-danger me-2"></i>Needs Verification</h6>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Applicants who recently submitted their documents.</p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+                                        <input type="text" class="form-control bg-light border-start-0" placeholder="Search applicant...">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle dash-table mb-0">
+                                    <thead class="text-muted small text-uppercase">
+                                        <tr>
+                                            <th>Applicant</th>
+                                            <th>Program</th>
+                                            <th>Submitted</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="fw-bold text-dark fs-sm">Jerome G. Robles</div>
+                                                <div class="text-muted text-truncate" style="max-width: 150px; font-size: 0.65rem;">ID: SEFE-2026-00341</div>
+                                            </td>
+                                            <td class="fs-sm text-secondary">SEFE</td>
+                                            <td class="fs-sm text-secondary">Today, 9:00 AM</td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning-dark border border-warning-subtle fw-medium px-2 py-1"><i class="bi bi-circle-fill small me-1" style="font-size:0.4rem;"></i> Pending Doc Check</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-primary px-3 rounded-pill" style="font-size: 0.75rem;">Verify</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="fw-bold text-dark fs-sm">Paola Grace Felix</div>
+                                                <div class="text-muted text-truncate" style="max-width: 150px; font-size: 0.65rem;">ID: SPES-2026-00455</div>
+                                            </td>
+                                            <td class="fs-sm text-secondary">SPES</td>
+                                            <td class="fs-sm text-secondary">Today, 10:15 AM</td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning-dark border border-warning-subtle fw-medium px-2 py-1"><i class="bi bi-circle-fill small me-1" style="font-size:0.4rem;"></i> Pending Doc Check</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-primary px-3 rounded-pill" style="font-size: 0.75rem;">Verify</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interview Encoding Queue -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h6 class="fw-bold mb-1">Interview Encoding Queue</h6>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Record interview results to finalize applicant profiles.</p>
+                                </div>
+                                <select class="form-select form-select-sm bg-light text-muted w-auto border">
+                                    <option>All Interviewers</option>
+                                    <option>My Assigned</option>
+                                </select>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle dash-table mb-0">
+                                    <thead class="text-muted small text-uppercase">
+                                        <tr>
+                                            <th>Applicant</th>
+                                            <th>Interviewer</th>
+                                            <th>Schedule</th>
+                                            <th class="text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="fw-bold text-dark fs-sm">Fin Ahsley C. Corrales</div>
+                                                <div class="text-muted text-truncate" style="max-width: 150px; font-size: 0.65rem;">ID: APP-2026-00562</div>
+                                            </td>
+                                            <td class="fs-sm text-secondary">Mr. De Guzman</td>
+                                            <td class="fs-sm text-secondary">Sept 22, 2:00 PM</td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-outline-indigo px-3 rounded-pill fw-semibold" style="font-size: 0.75rem; border-color: #6610f2; color: #6610f2;">Encode Result</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="fw-bold text-dark fs-sm">Jerome G. Robles</div>
+                                                <div class="text-muted text-truncate" style="max-width: 150px; font-size: 0.65rem;">ID: SPES-2026-00612</div>
+                                            </td>
+                                            <td class="fs-sm text-secondary">Ms. Santos</td>
+                                            <td class="fs-sm text-secondary">Sept 22, 3:30 PM</td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-outline-indigo px-3 rounded-pill fw-semibold" style="font-size: 0.75rem; border-color: #6610f2; color: #6610f2;">Encode Result</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Span 4 on Large) -->
+                <div class="col-lg-4">
+                    
+                    <!-- Placement Tracker Widget -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4" style="background-color: #1e428a;">
+                        <div class="card-body p-4 text-white">
+                            <h6 class="fw-bold mb-1">Ready for Assignment</h6>
+                            <p class="text-white-50 mb-3" style="font-size: 0.75rem;">Applicants who passed screening and need an office.</p>
+                            
+                            <h2 class="display-5 fw-bold mb-0">115</h2>
+                            <p class="small text-white-50 mb-3">Total unassigned qualified students</p>
+
+                            <a href="#" class="btn btn-light text-navy fw-bold w-100 rounded-pill mb-2 shadow-sm" style="font-size: 0.8rem;">Start Matching Offices</a>
+                        </div>
+                    </div>
+
+                    <!-- Staff Recent Activity -->
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <h6 class="fw-bold mb-1">My Recent Activity</h6>
+                            <p class="text-muted mb-4" style="font-size: 0.75rem;">Log of your latest actions.</p>
+
+                            <div class="dash-timeline">
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-success"></div>
+                                    <div class="timeline-content">
+                                        <div class="d-flex align-items-center gap-1 mb-1">
+                                            <span class="fw-bold text-dark fs-sm">Chaniell B. Brequillo</span>
+                                        </div>
+                                        <p class="text-secondary mb-1 lh-sm" style="font-size: 0.75rem;">You verified documents and marked applicant as <span class="fw-semibold text-success">Qualified</span>.</p>
+                                        <div class="text-muted" style="font-size: 0.65rem;">10 minutes ago</div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-primary"></div>
+                                    <div class="timeline-content">
+                                        <div class="d-flex align-items-center gap-1 mb-1">
+                                            <span class="fw-bold text-dark fs-sm">Generated Report</span>
+                                        </div>
+                                        <p class="text-secondary mb-1 lh-sm" style="font-size: 0.75rem;">You exported the 'Weekly Processed Applications' report.</p>
+                                        <div class="text-muted" style="font-size: 0.65rem;">1 hour ago</div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item border-0 pb-0">
+                                    <div class="timeline-marker bg-indigo"></div>
+                                    <div class="timeline-content">
+                                        <div class="d-flex align-items-center gap-1 mb-1">
+                                            <span class="fw-bold text-dark fs-sm">Paola Grace E. Felix</span>
+                                        </div>
+                                        <p class="text-secondary mb-1 lh-sm" style="font-size: 0.75rem;">You assigned applicant to <span class="fw-semibold text-dark">City Library</span>.</p>
+                                        <div class="text-muted" style="font-size: 0.65rem;">2 hours ago</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Sidebar Toggle Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtn = document.getElementById('sidebarToggleBtn');
+            const collapseBtn = document.getElementById('sidebarCollapseBtn');
+            const collapseIcon = collapseBtn ? collapseBtn.querySelector('i') : null;
+            
+            function toggleSidebar(e) {
+                if (e) e.preventDefault();
+                document.body.classList.toggle('sidebar-collapsed');
+                
+                if (collapseIcon) {
+                    if (document.body.classList.contains('sidebar-collapsed')) {
+                        collapseIcon.classList.remove('bi-chevron-bar-left');
+                        collapseIcon.classList.add('bi-chevron-bar-right');
+                    } else {
+                        collapseIcon.classList.remove('bi-chevron-bar-right');
+                        collapseIcon.classList.add('bi-chevron-bar-left');
+                    }
+                }
+            }
+
+            if (toggleBtn) toggleBtn.addEventListener('click', toggleSidebar);
+            if (collapseBtn) collapseBtn.addEventListener('click', toggleSidebar);
+        });
+    </script>
+</body>
+</html>

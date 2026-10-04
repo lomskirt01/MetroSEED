@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroSEED - Create Applicant Account</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <!-- FIXED SEMI-TRANSPARENT NAVBAR -->
+    <nav class="navbar fixed-navbar py-2">
+      <div class="container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between">
+        
+        <!-- BRAND / LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2 me-auto overflow-hidden" href="index.html" style="max-width: calc(100% - 60px);">
+          <img src="photos/metro-seed-logo.png" alt="Logo" width="36" height="36" class="d-inline-block flex-shrink-0" onerror="this.src='https://via.placeholder.com/36x36/1e428a/ffffff?text=M'" />
+          <div class="d-flex flex-column lh-1 overflow-hidden">
+            <span class="fw-bold text-navy text-truncate" style="font-size: clamp(0.75rem, 2.5vw, 0.9rem); color: #1e428a;">
+              MetroSEED-Naga
+            </span>
+            <span class="text-muted fst-italic text-truncate" style="font-size: clamp(0.65rem, 2vw, 0.72rem); color: #8faada !important;">
+              Summer Employment, Eligibility, and Deployment System for SPES & SEFE
+            </span>
+          </div>
+        </a>
+
+        <!-- RIGHT SIDE CONTAINER (INLINE BUTTONS + HAMBURGER DROPDOWN) -->
+        <div class="d-flex align-items-center gap-2 ms-auto flex-shrink-0">
+          
+          <!-- INLINE NAV ITEMS (VISIBLE ON LARGE SCREENS ONLY) -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <a class="btn text-white px-4 py-2 rounded-pill fw-semibold bg-navy text-nowrap" href="index.html" style="background-color: #1e428a;">
+              Home
+            </a>
+            <a class="btn fw-semibold px-3 py-2 text-navy text-nowrap" href="registration.html" style="color: #1e428a !important;">
+              Register
+            </a>
+            <a class="btn border px-4 py-2 rounded-pill fw-semibold text-navy bg-white text-nowrap me-1" href="login.html" style="color: #1e428a !important; border-color: #d0dbe9 !important;">
+              Log In
+            </a>
+          </div>
+
+          <!-- HAMBURGER DROPDOWN MENU -->
+          <div class="dropdown">
+            <button class="btn border-0 shadow-none p-1" type="button" id="mainMenuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- DROPDOWN BOX CONTENT -->
+            <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu p-2 mt-2" aria-labelledby="mainMenuDropdown">
+              <!-- MOBILE-ONLY ITEMS (Home, Register, Log In) -->
+              <li class="d-lg-none">
+                <a class="dropdown-item btn text-white rounded-pill fw-semibold text-center mb-1 bg-navy" href="index.html" style="background-color: #1e428a; color: #ffffff !important;">
+                  Home
+                </a>
+              </li>
+              <li class="d-lg-none">
+                <a class="dropdown-item fw-semibold text-center py-2 text-navy" href="registration.html" style="color: #1e428a !important;">
+                  Register
+                </a>
+              </li>
+              <li class="d-lg-none">
+                <a class="dropdown-item btn border rounded-pill fw-semibold text-center text-navy mb-2" href="login.html" style="color: #1e428a !important; border-color: #d0dbe9 !important;">
+                  Log In
+                </a>
+              </li>
+              <li class="d-lg-none"><hr class="dropdown-divider my-1"></li>
+
+              <!-- COMMON DROPDOWN ITEMS -->
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#more-info" style="color: #1e428a;">
+                  <i class="bi bi-info-circle text-red"></i> About Us
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#programs" style="color: #1e428a;">
+                  <i class="bi bi-grid text-red"></i> Programs
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#qualifications" style="color: #1e428a;">
+                  <i class="bi bi-check-circle text-red"></i> Qualifications
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#processes" style="color: #1e428a;">
+                  <i class="bi bi-diagram-3 text-red"></i> Processes
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Background Decoration for bottom blue/red block -->
+    <div class="bg-decoration"></div>
+
+    <!-- Main Content -->
+    <div class="container main-container">
+        <div class="card form-card border-0 shadow-lg">
+            <!-- Split Blue and Red Top Border -->
+            <div class="card-top-line"></div>
+
+            <div class="card-body p-4 p-md-5">
+                
+                <!-- Back Link -->
+                <a href="index.html" class="text-decoration-none text-muted small mb-3 d-inline-block">
+                    <i class="bi bi-chevron-left small"></i> Back to Home
+                </a>
+
+                <!-- Form Header -->
+                <div class="text-center mb-5">
+                    <img src="photos/metro-peso-seal.png" alt="Metro Peso Seal" class="mb-3 rounded-circle shadow-sm" width="70" height="70">
+                    <h3 class="fw-bold text-dark mb-1">Create Applicant Account</h3>
+                    <p class="text-muted small mb-2">Create your YEP applicant account — SPES & SEFE 2026</p>
+                    <p class="small text-muted">Already have an account? <a href="login.html" class="text-navy fw-semibold text-decoration-none">Sign in here</a></p>
+                </div>
+
+                <!-- Progress Stepper -->
+                <div class="d-flex justify-content-between position-relative mb-5 step-container mx-auto">
+                    <div class="step-line"></div>
+                    <div class="step text-center position-relative z-1">
+                        <div class="step-circle active">1</div>
+                        <div class="step-text active">Personal Info</div>
+                    </div>
+                    <div class="step text-center position-relative z-1">
+                        <div class="step-circle">2</div>
+                        <div class="step-text">Educational Background</div>
+                    </div>
+                    <div class="step text-center position-relative z-1">
+                        <div class="step-circle">3</div>
+                        <div class="step-text">Skill Profiling</div>
+                    </div>
+                    <div class="step text-center position-relative z-1">
+                        <div class="step-circle">4</div>
+                        <div class="step-text">Review</div>
+                    </div>
+                </div>
+
+                <!-- Section Details Box -->
+                <div class="section-header rounded p-3 mb-4 d-flex align-items-center">
+                    <div class="section-number bg-navy text-white rounded-circle d-flex justify-content-center align-items-center me-3">
+                        01
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold text-navy">Personal Info</h6>
+                        <small class="text-muted">Provide your basic details and household information.</small>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <form>
+                    <div class="row g-4 mb-4">
+                        <!-- Last Name -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control custom-input" placeholder="Dela Cruz">
+                        </div>
+                        <!-- First Name -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">First Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control custom-input" placeholder="Juan">
+                        </div>
+                        <!-- Middle Name -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Middle Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="Santos">
+                        </div>
+                        <!-- Suffix -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Suffix</label>
+                            <input type="text" class="form-control custom-input" placeholder="None">
+                        </div>
+                        <!-- Date of Birth -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Date of Birth <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control custom-input">
+                        </div>
+                        <!-- Sex -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Sex <span class="text-danger">*</span></label>
+                            <select class="form-select custom-input">
+                                <option selected>Select...</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                        </div>
+                        <!-- Contact Number -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Contact Number <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control custom-input" placeholder="09XX-XXX-XXXX">
+                        </div>
+                        <!-- Email Address -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control custom-input" placeholder="juan@email.com">
+                        </div>
+                        <!-- Barangay -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Barangay <span class="text-danger">*</span></label>
+                            <select class="form-select custom-input">
+                                <option selected>Brgy. Tabuco</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6"></div> <!-- Empty column for spacing alignment -->
+
+                        <!-- Annual Family Income -->
+                        <div class="col-12">
+                            <label class="form-label small fw-semibold">Annual Family Income <span class="text-danger">*</span></label>
+                            <select class="form-select custom-input">
+                                <option selected>Select income range...</option>
+                            </select>
+                        </div>
+                        
+                        <!-- CBMS Status -->
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">CBMS Status</label>
+                            <select class="form-select custom-input">
+                                <option selected>Select CBMS status...</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkboxes -->
+                    <div class="d-flex gap-4 mb-5 mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="soloParent">
+                            <label class="form-check-label small" for="soloParent">Dependent of solo parent</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pwd">
+                            <label class="form-check-label small" for="pwd">Dependent of PWD</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer Buttons -->
+                    <div class="d-flex justify-content-between align-items-center border-top pt-4 mt-2">
+                        <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-3 text-dark bg-white">Cancel</button>
+                        <button type="button" class="btn btn-primary px-4 py-2 rounded-3">Continue &rarr;</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

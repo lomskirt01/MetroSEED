@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroSEED - Track Application Status</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="track-status-body">
+
+    <!-- FIXED SEMI-TRANSPARENT NAVBAR WITH CONTENTS -->
+    <nav class="navbar fixed-navbar py-2">
+      <div class="container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between">
+        
+        <!-- BRAND / LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2 me-auto overflow-hidden" href="index.html" style="max-width: calc(100% - 60px);">
+          <img src="photos/metro-seed-logo.png" alt="Logo" width="36" height="36" class="d-inline-block flex-shrink-0" onerror="this.src='https://via.placeholder.com/36x36/1e428a/ffffff?text=M'" />
+          <div class="d-flex flex-column lh-1 overflow-hidden">
+            <span class="fw-bold text-navy text-truncate" style="font-size: clamp(0.75rem, 2.5vw, 0.9rem); color: #1e428a;">
+              MetroSEED-Naga
+            </span>
+            <span class="text-uppercase fw-semibold text-truncate" style="font-size: clamp(0.65rem, 2vw, 0.72rem); color: #4a74c9;">
+              Track Your Application Status
+            </span>
+          </div>
+        </a>
+
+        <!-- RIGHT SIDE CONTAINER (INLINE BUTTONS + HAMBURGER DROPDOWN) -->
+        <div class="d-flex align-items-center gap-2 ms-auto flex-shrink-0">
+          
+          <!-- INLINE NAV ITEMS (VISIBLE ON LARGE SCREENS ONLY) -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <a class="btn text-white px-4 py-2 rounded-pill fw-semibold bg-navy text-nowrap" href="index.html" style="background-color: #1e428a;">
+              Home
+            </a>
+            <a class="btn fw-semibold px-3 py-2 text-navy text-nowrap" href="registration.html" style="color: #1e428a !important;">
+              Register
+            </a>
+            <a class="btn border px-4 py-2 rounded-pill fw-semibold text-navy bg-white text-nowrap me-1" href="login.html" style="color: #1e428a !important; border-color: #d0dbe9 !important;">
+              Log In
+            </a>
+          </div>
+
+          <!-- HAMBURGER DROPDOWN MENU -->
+          <div class="dropdown">
+            <button class="btn border-0 shadow-none p-1" type="button" id="mainMenuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- DROPDOWN BOX CONTENT -->
+            <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu p-2 mt-2" aria-labelledby="mainMenuDropdown">
+              <!-- MOBILE-ONLY ITEMS (Home, Register, Log In) -->
+              <li class="d-lg-none">
+                <a class="dropdown-item btn text-white rounded-pill fw-semibold text-center mb-1 bg-navy" href="index.html" style="background-color: #1e428a; color: #ffffff !important;">
+                  Home
+                </a>
+              </li>
+              <li class="d-lg-none">
+                <a class="dropdown-item fw-semibold text-center py-2 text-navy" href="registration.html" style="color: #1e428a !important;">
+                  Register
+                </a>
+              </li>
+              <li class="d-lg-none">
+                <a class="dropdown-item btn border rounded-pill fw-semibold text-center text-navy mb-2" href="login.html" style="color: #1e428a !important; border-color: #d0dbe9 !important;">
+                  Log In
+                </a>
+              </li>
+              <li class="d-lg-none"><hr class="dropdown-divider my-1"></li>
+
+              <!-- COMMON DROPDOWN ITEMS -->
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#more-info" style="color: #1e428a;">
+                  <i class="bi bi-info-circle text-red"></i> About Us
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#programs" style="color: #1e428a;">
+                  <i class="bi bi-grid text-red"></i> Programs
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#qualifications" style="color: #1e428a;">
+                  <i class="bi bi-check-circle text-red"></i> Qualifications
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="index.html#processes" style="color: #1e428a;">
+                  <i class="bi bi-diagram-3 text-red"></i> Processes
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Background & Content Wrapper -->
+    <div class="track-bg-wrapper d-flex align-items-center justify-content-center">
+        <!-- Split Background Elements -->
+        <div class="track-bg-blue-pane"></div>
+        <div class="track-bg-pink-line"></div>
+
+        <!-- Tracking Card -->
+        <div class="card track-card shadow-lg border-0 z-3 mx-3">
+            <div class="card-body p-4 p-md-5 text-center">
+                
+                <!-- Seal & Headers -->
+                <img src="photos/metro-peso-seal.png" alt="Seal" width="45" height="45" class="mb-2" onerror="this.src='https://via.placeholder.com/45x45/1e428a/ffffff?text=Seal'">
+                <h6 class="text-navy fw-bold mb-0" style="font-size: 0.85rem; letter-spacing: 0.5px;">METRO PESO NAGA</h6>
+                <p class="text-muted mb-0 lh-sm" style="font-size: 0.65rem;">
+                    City Government of Naga<br>
+                    <i style="color: #8c98a4;">Serving NagenYouth since 2026</i>
+                </p>
+                <h6 class="text-navy fw-bold mt-3 mb-4" style="font-size: 0.8rem; letter-spacing: 0.5px;">YOUTH EMPLOYMENT PROGRAM</h6>
+
+                <!-- Main Title -->
+                <h4 class="text-navy fw-bold mb-4" style="font-size: 1.35rem;">Enter Your Application ID</h4>
+
+                <!-- Form -->
+                <form class="text-start">
+                    <label class="form-label text-navy fw-bold mb-2" style="font-size: 0.7rem; letter-spacing: 0.5px;">APPLICATION ID</label>
+                    
+                    <div class="input-group mb-4 custom-input-group">
+                        <span class="input-group-text bg-light-gray border-end-0 text-muted px-3">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0 ps-0 bg-light-gray track-input" placeholder="e.g. APP-2026-00124">
+                    </div>
+
+                    <a href="trackStatus.html" class="text-decoration-none w-100">
+                      <button type="button" class="btn bg-navy text-white w-100 rounded-2 py-2 d-flex justify-content-center align-items-center gap-2 fw-medium shadow-sm custom-btn-hover">
+                        Continue <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                      </button>
+                      
+                    </a>
+
+                    
+                </form>
+
+                <!-- Helper Text -->
+                <p class="text-muted mt-4 mx-auto" style="font-size: 0.75rem; line-height: 1.4; max-width: 280px; color: #8c98a4 !important;">
+                    Enter the ID provided when you submitted your application to track your status.
+                </p>
+
+            </div>
+            
+            <!-- Card Footer / Link -->
+            <div class="card-footer bg-white border-0 text-center pb-4 pt-0">
+                <a href="index.html" class="text-danger text-decoration-none fw-bold" style="font-size: 0.75rem; border-bottom: 1.5px solid #cf2232; padding-bottom: 1px;">
+                    Back to homepage
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

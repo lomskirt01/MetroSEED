@@ -1,0 +1,315 @@
+html {
+    scroll-behavior: smooth;
+}
+.hero-section {
+    background-image: url('../photos/YEP HOMEPAGE BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 80px;
+    overflow: hidden;
+}
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+.text-navy { color: #1e428a; }
+.text-red { color: #cf2232; }
+.bg-navy { background-color: #1e428a; }
+.btn-badge {
+    background-color: #f2b738;
+    color: #1e428a;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 50rem;
+}
+.hero-nav-card {
+    background: #ffffff;
+    border-radius: 50rem;
+    padding: 0.6rem 1.25rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.hero-nav-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.hero-nav-card .card-icon-arrow {
+    color: #08296d;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: rgba(245, 247, 250, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.custom-dropdown-menu {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    min-width: 220px;
+}
+.circle-badge-container {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+.circle-red {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 82%;
+    height: 82%;
+    background-color: #cf2232;
+    border-radius: 50%;
+}
+.circle-yellow {
+    position: absolute;
+    top: 8%;
+    right: 0;
+    width: 84%;
+    height: 84%;
+    background-color: #f2b738;
+    border-radius: 50%;
+}
+.circle-blue {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #1e428a;
+    border-radius: 50%;
+}
+.circle-white-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.blue-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #1e428a;
+    margin-top: 15px;
+}
+.accent-block-red {
+    display: inline-block;
+    width: 12px;
+    height: 24px;
+    background-color: #cf2232;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.yep-img-card {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.programs-section {
+    background: linear-gradient(180deg, #f4f8fc 0%, #d8e5f5 50%, #bacfe6 100%);
+    position: relative;
+    overflow: hidden;
+}
+.program-card {
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px !important;
+    width: 100%;
+}
+@media (min-width: 992px) {
+    .program-card {
+        transform-origin: center center;
+    }
+    .sefe-card {
+        transform: rotate(-4deg) translateY(-10px);
+        z-index: 1;
+    }
+    .spes-card {
+        transform: rotate(4deg) translateY(10px);
+        z-index: 2;
+    }
+    .sefe-card:hover, .spes-card:hover {
+        transform: rotate(0deg) scale(1.02);
+        z-index: 3;
+    }
+    .timeline-connecting-line {
+        position: absolute;
+        top: 25px;
+        left: 8%;
+        right: 8%;
+        height: 2px;
+        background: linear-gradient(90deg, #1d4f9e 0%, #1d4f9e 33%, #f2b738 33%, #f2b738 66%, #52b788 66%, #52b788 100%);
+        z-index: 1;
+    }
+}
+.hero-transition-gradient {
+    background: transparent !important;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.qual-toggle-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50rem;
+    transition: all 0.2s ease;
+}
+.qual-toggle-btn-blue {
+    color: #1e428a;
+    border-color: #d0dbe9;
+    background-color: #ffffff;
+}
+.qual-toggle-btn-blue:hover,
+.qual-toggle-btn-blue:focus {
+    background-color: #1e428a;
+    color: #ffffff;
+}
+.qual-toggle-btn-red {
+    color: #cf2232;
+    border-color: #f8d7da;
+    background-color: #ffffff;
+}
+.qual-toggle-btn-red:hover,
+.qual-toggle-btn-red:focus {
+    background-color: #cf2232;
+    color: #ffffff;
+}
+.qual-toggle-btn .bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+.qual-toggle-btn:not(.collapsed) .bi-chevron-down {
+    transform: rotate(180deg);
+}
+.processes-section {
+    background: linear-gradient(135deg, #eef4fc 0%, #dbe6f6 50%, #e8f0fe 100%);
+    position: relative;
+    overflow: hidden;
+}
+.processes-section::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+.processes-section .container {
+    position: relative;
+    z-index: 2;
+}
+.process-main-card {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(30, 66, 138, 0.08);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.process-header-banner {
+    background: linear-gradient(90deg, #1d4f9e 0%, #1e428a 100%);
+    padding: 2.2rem 2.5rem;
+}
+.timeline-container {
+    position: relative;
+    padding: 1rem 0;
+}
+.step-node {
+    position: relative;
+    z-index: 2;
+}
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.bg-step-blue { background-color: #1d4f9e; }
+.bg-step-yellow { background-color: #f2b738; }
+.bg-step-green { background-color: #52b788; }
+.text-step-blue { color: #1d4f9e; }
+.text-step-yellow { color: #d99b00; }
+.text-step-green { color: #2d6a4f; }
+.cta-light-section {
+    background-image: url('../photos/YEP HOMEPAGE BG.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+    min-height: 420px;
+    text-align: center;
+    position: relative;
+}
+.cta-light-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+.cta-light-section .container {
+    position: relative;
+    z-index: 2;
+}
+.site-footer {
+    background-color: #1e428a;
+    color: #ffffff;
+    padding: 2rem 0;
+}

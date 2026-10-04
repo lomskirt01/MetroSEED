@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Status - MetroSEED-Naga</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="stylesheet.css"> 
+</head>
+<body>
+
+  <!-- FIXED SEMI-TRANSPARENT NAVBAR WITH BLUR EFFECT -->
+  <nav class="navbar fixed-navbar-blur py-2">
+    <div class="container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between flex-nowrap">
+      
+      <!-- BRAND LOGO & SUBTITLE -->
+      <a class="navbar-brand d-flex align-items-center gap-2 overflow-hidden me-2" href="#" style="max-width: calc(100% - 140px);">
+        <img src="photos/metro-seed-logo.png" alt="MetroSEED Logo" width="36" height="36" class="d-inline-block flex-shrink-0" />
+        <div class="d-flex flex-column lh-1 overflow-hidden">
+          <span class="fw-bold text-navy text-truncate" style="font-size: clamp(0.75rem, 2.5vw, 0.9rem);">
+            MetroSEED-Naga
+          </span>
+          <span class="text-muted fst-italic text-truncate" style="font-size: clamp(0.6rem, 1.8vw, 0.7rem);">
+            Summer Employment, Eligibility, and Deployment System for SPES & SEFE
+          </span>
+        </div>
+      </a>
+
+      <!-- BACK TO HOME BUTTON -->
+      <a href="index.html" class="btn btn-back-home text-nowrap flex-shrink-0 d-inline-flex align-items-center gap-1">
+        <span>Back to Home</span>
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-banner position-relative text-center mb-4">
+    <div class="container position-relative z-2">
+      
+      <!-- Title Area -->
+      <div class="text-center mb-3">
+        <div class="page-subtitle-top">YEP APPLICATION PORTAL</div>
+        <h1 class="page-title mb-1">
+          MY APPLICATION STATUS
+        </h1>
+        <p class="page-desc text-muted mb-0">
+          Track your documentary requirements, screening progress, and future office assignment.
+        </p>
+      </div>
+
+      <!-- Applicant Details Card Bar -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-xl-7 col-lg-8 col-md-10">
+          <div class="summary-card mb-10">
+            <div class="row text-center text-md-start g-2">
+              
+              <!-- APPLICANT -->
+              <div class="col-6 col-md-3 summary-col border-end-md">
+                <div class="summary-label">APPLICANT</div>
+                <div class="summary-value text-truncate">Juan S. Dela Cruz</div>
+              </div>
+
+              <!-- PROGRAM -->
+              <div class="col-6 col-md-3 summary-col border-end-md">
+                <div class="summary-label">PROGRAM</div>
+                <div class="summary-value text-truncate">PENDING</div>
+              </div>
+
+              <!-- APPLICATION YEAR -->
+              <div class="col-6 col-md-3 summary-col border-end-md">
+                <div class="summary-label">APPLICATION YEAR</div>
+                <div class="summary-value text-truncate">2026</div>
+              </div>
+
+              <!-- APPLICATION NO. -->
+              <div class="col-6 col-md-3 summary-col">
+                <div class="summary-label">APPLICATION NO.</div>
+                <div class="summary-value text-truncate">YEP-2026-0847</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="status-bottom-bars"></div>
+  </section>
+
+  <!-- APPLICATION DETAILS & PROGRESS SECTION -->
+  <section class="status-details-section pb-4">
+    <div class="container" style="max-width: 820px;">
+
+      <!-- TOP CARD: APPLICATION PROGRESS -->
+      <div class="card progress-main-card border-0 shadow-sm rounded-4 overflow-hidden mb-3">
+        
+        <!-- Card Banner Header -->
+        <div class="progress-banner p-3 text-white d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
+          <div>
+            <span class="text-uppercase fw-semibold tracking-wider text-white-50 d-block" style="font-size: 0.65rem; letter-spacing: 1px;">
+              YEP APPLICATION PORTAL
+            </span>
+            <h2 class="fw-black h5 text-white mb-0 text-uppercase" style="font-weight: 900; font-size: 1.1rem;">
+              APPLICATION PROGRESS
+            </h2>
+            <p class="mb-0 text-white-50" style="font-size: 0.75rem;">
+              Your application is currently being reviewed for eligibility and completeness.
+            </p>
+          </div>
+          <div class="status-badge-pill-yellow d-inline-flex align-items-center gap-1.5 px-2.5 py-1.5 rounded-pill flex-shrink-0">
+            <i class="bi bi-clock-history"></i>
+            <span>Under Screening</span>
+          </div>
+        </div>
+
+        <!-- Card Body / Progress Tracker -->
+        <div class="card-body p-3 bg-white">
+          
+          <!-- Stepper Bar -->
+          <div class="stepper-wrapper my-2">
+            <div class="stepper-line"></div>
+            
+            <div class="step-item step-completed">
+              <div class="step-icon"><i class="bi bi-check-lg"></i></div>
+              <span class="step-title">Registered</span>
+              <span class="step-status">Completed</span>
+            </div>
+
+            <div class="step-item step-completed">
+              <div class="step-icon"><i class="bi bi-check-lg"></i></div>
+              <span class="step-title">Documents Submitted</span>
+              <span class="step-status">Completed</span>
+            </div>
+
+            <div class="step-item step-active">
+              <div class="step-icon"><i class="bi bi-clock"></i></div>
+              <span class="step-title">Under Screening</span>
+              <span class="step-status">In progress</span>
+            </div>
+
+            <div class="step-item step-upcoming">
+              <div class="step-icon"></div>
+              <span class="step-title">Qualified</span>
+              <span class="step-status">Upcoming</span>
+            </div>
+
+            <div class="step-item step-upcoming">
+              <div class="step-icon"></div>
+              <span class="step-title">Assigned / Deployed</span>
+              <span class="step-status">Upcoming</span>
+            </div>
+          </div>
+
+          <!-- Warning / Notice Alert Box -->
+          <div class="alert alert-warning-custom d-flex align-items-center gap-2 p-2 px-3 rounded-3 mb-0 mt-3">
+            <div class="alert-icon-circle flex-shrink-0">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <p class="mb-0 text-secondary" style="font-size: 0.75rem; line-height: 1.3;">
+              <strong style="color: #856404;">What happens now:</strong> Metro PESO staff are reviewing your submitted documents and checking your eligibility. No action is needed unless the office contacts you.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TWO-COLUMN GRID: REQUIREMENTS & OFFICE ASSIGNMENT -->
+      <div class="row g-3">
+        
+        <!-- LEFT COLUMN: DOCUMENTARY REQUIREMENTS CARD -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+            
+            <!-- Card Banner Header -->
+            <div class="requirements-banner p-3 text-white d-flex justify-content-between align-items-center gap-2">
+              <div>
+                <span class="text-uppercase fw-semibold tracking-wider text-white-50 d-block" style="font-size: 0.65rem; letter-spacing: 1px;">
+                  ELIGIBILITY SCREENING
+                </span>
+                <h3 class="fw-black text-white mb-0 text-uppercase" style="font-weight: 900; font-size: 1rem;">
+                  DOCUMENTARY REQUIREMENTS
+                </h3>
+                <p class="mb-0 text-white-50" style="font-size: 0.72rem;">
+                  Required records for eligibility screening
+                </p>
+              </div>
+              <div class="pill-count-badge d-inline-flex align-items-center gap-1 px-2.5 py-1.5 rounded-pill flex-shrink-0">
+                <i class="bi bi-file-earmark-text"></i>
+                <span>4 of 6 Received</span>
+              </div>
+            </div>
+
+            <div class="card-body p-3 bg-white">
+              
+              <!-- Yellow Note Box -->
+              <div class="alert alert-yellow-subtle p-2 px-3 rounded-3 d-flex align-items-start gap-2 mb-2">
+                <div class="yellow-icon-badge flex-shrink-0">
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                </div>
+                <div style="font-size: 0.72rem;">
+                  <strong class="d-block mb-0.5 text-dark">Physical submission only</strong>
+                  <span class="text-secondary">Submit all documents in person at the Metro PESO Office, City Hall, Naga City. Online document uploads are not accepted.</span>
+                </div>
+              </div>
+
+              <!-- Blue Status Guide Box -->
+              <div class="alert alert-blue-subtle p-2 px-3 rounded-3 mb-3" style="font-size: 0.72rem;">
+                <strong class="text-navy">Status guide:</strong> <span class="text-secondary">Submitted = physically received.</span> <span style="color: #b08210; font-weight: 600;">For Verification = received and being checked by staff.</span>
+              </div>
+
+              <!-- REQUIREMENTS CHECKLIST TABLE -->
+              <div class="requirements-checklist d-flex flex-column gap-2">
+                
+                <div class="req-item d-flex align-items-center justify-content-between pb-2 border-bottom">
+                  <div>
+                    <h4 class="fw-bold text-navy mb-0" style="font-size: 0.78rem;">Application Form</h4>
+                    <span class="text-muted" style="font-size: 0.68rem;">Received Sept 14, 2026</span>
+                  </div>
+                  <span class="status-pill status-submitted"><i class="bi bi-check-lg me-1"></i> Submitted</span>
+                </div>
+
+                <div class="req-item d-flex align-items-center justify-content-between pb-2 border-bottom">
+                  <div>
+                    <h4 class="fw-bold text-navy mb-0" style="font-size: 0.78rem;">Certificate of Indigency</h4>
+                    <span class="text-muted" style="font-size: 0.68rem;">Received Sept 14, 2026</span>
+                  </div>
+                  <span class="status-pill status-submitted"><i class="bi bi-check-lg me-1"></i> Submitted</span>
+                </div>
+
+                <div class="req-item d-flex align-items-center justify-content-between pb-2 border-bottom">
+                  <div>
+                    <h4 class="fw-bold text-navy mb-0" style="font-size: 0.78rem;">Certificate of Grades (Latest)</h4>
+                    <span class="text-muted" style="font-size: 0.68rem;">Staff is verifying</span>
+                  </div>
+                  <span class="status-pill status-verification"><i class="bi bi-clock me-1"></i> For Verification</span>
+                </div>
+
+                <div class="req-item d-flex align-items-center justify-content-between pb-2 border-bottom">
+                  <div>
+                    <h4 class="fw-bold text-navy mb-0" style="font-size: 0.78rem;">Valid ID (any government-issued)</h4>
+                    <span class="text-muted" style="font-size: 0.68rem;">Received Sept 14, 2026</span>
+                  </div>
+                  <span class="status-pill status-submitted"><i class="bi bi-check-lg me-1"></i> Submitted</span>
+                </div>
+
+                <div class="req-item d-flex align-items-center justify-content-between pb-2 border-bottom">
+                  <div>
+                    <h4 class="fw-bold text-navy mb-0" style="font-size: 0.78rem;">PSA Birth Certificate</h4>
+                    <span class="text-muted" style="font-size: 0.68rem;">Please submit at Metro PESO office</span>
+                  </div>
+                  <span class="status-pill status-not-submitted">&ndash; Not Submitted</span>
+                </div>
+
+                <div class="req-item d-flex align-items-center justify-content-between pt-0.5">
+                  <div>
+                    <h4 class="fw-bold text-navy mb-0" style="font-size: 0.78rem;">ITR or Certificate of Indigency (Family)</h4>
+                    <span class="text-muted" style="font-size: 0.68rem;">Required for income verification</span>
+                  </div>
+                  <span class="status-pill status-not-submitted">&ndash; Not Submitted</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: OFFICE ASSIGNMENT CARD -->
+        <div class="col-lg-4">
+          <div class="card assignment-card border-0 shadow-sm rounded-4 p-3 text-center h-100 bg-white">
+            <h3 class="fw-bold text-navy text-start mb-3" style="font-size: 0.85rem;">Office Assignment</h3>
+            
+            <div class="my-auto py-2">
+              <div class="icon-circle-building mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <i class="bi bi-building fs-5"></i>
+              </div>
+              
+              <h4 class="fw-bold text-navy mb-1" style="font-size: 0.85rem;">Pending Assignment</h4>
+              <p class="text-muted" style="font-size: 0.72rem; line-height: 1.4;">
+                Your office assignment details will appear here after screening is complete and your application is qualified.
+              </p>
+              
+              <div class="bg-light rounded-3 p-2.5 text-start mt-3">
+                <span class="text-uppercase fw-bold text-muted d-block mb-0.5" style="font-size: 0.6rem; letter-spacing: 0.5px;">CURRENT REQUIREMENT</span>
+                <span class="fw-bold text-navy" style="font-size: 0.75rem;">Complete screening and qualification</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
