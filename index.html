@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youth Employment Program - Naga City</title>
+
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+  <link rel="stylesheet" href="stylesheet.css" />  
+  
+</head>
+
+
+<body>
+
+  <!-- HERO SECTION WITH CROPPED BACKGROUND -->
+  <section class="hero-section d-flex flex-column justify-content-between pb-4">
+    
+    <!-- FIXED SEMI-TRANSPARENT NAVBAR -->
+    <nav class="navbar fixed-navbar">
+      <div class="container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between">
+        
+        <!-- BRAND / LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2 me-auto overflow-hidden" href="#" style="max-width: calc(100% - 60px);">
+          <img src="photos/metro-peso-logo.png" alt="Logo" width="36" height="36" class="d-inline-block flex-shrink-0" />
+          <div class="d-flex flex-column lh-1 overflow-hidden">
+            <span class="fw-bold text-navy text-truncate" style="font-size: clamp(0.75rem, 2.5vw, 0.9rem); color: #1e428a;">
+              MetroSEED-Naga
+            </span>
+            <span class="text-muted fst-italic text-truncate" style="font-size: clamp(0.65rem, 2vw, 0.72rem); color: #8faada !important;">
+              Summer Employment, Eligibility, and Deployment System for SPES & SEFE
+            </span>
+          </div>
+        </a>
+
+        <!-- INLINE NAV ITEMS (VISIBLE ON LARGE SCREENS ONLY) -->
+        <!-- RIGHT SIDE CONTAINER (INLINE BUTTONS + HAMBURGER DROPDOWN) -->
+        <div class="d-flex align-items-center gap-2 ms-auto flex-shrink-0">
+          
+          <!-- INLINE NAV ITEMS (VISIBLE ON LARGE SCREENS ONLY) -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <a class="btn text-white px-4 py-2 rounded-pill fw-semibold bg-navy text-nowrap" href="#" style="background-color: #1e428a;">
+              Home
+            </a>
+            <a class="btn fw-semibold px-3 py-2 text-navy text-nowrap" href="registration.html" style="color: #1e428a !important;">
+              Register
+            </a>
+            <a class="btn border px-4 py-2 rounded-pill fw-semibold text-navy bg-white text-nowrap me-1" href="login.html" style="color: #1e428a !important; border-color: #d0dbe9 !important;">
+              Log In
+            </a>
+          </div>
+
+          <!-- HAMBURGER DROPDOWN MENU -->
+          <div class="dropdown">
+            <button class="btn border-0 shadow-none p-1" type="button" id="mainMenuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- DROPDOWN BOX CONTENT -->
+            <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu p-2 mt-2" aria-labelledby="mainMenuDropdown">
+              <!-- MOBILE-ONLY ITEMS (Home, Register, Log In) -->
+              <li class="d-lg-none">
+                <a class="dropdown-item btn text-white rounded-pill fw-semibold text-center mb-1 bg-navy" href="#" style="background-color: #1e428a; color: #ffffff !important;">
+                  Home
+                </a>
+              </li>
+              <li class="d-lg-none">
+                <a class="dropdown-item fw-semibold text-center py-2 text-navy" href="registration.html" style="color: #1e428a !important;">
+                  Register
+                </a>
+              </li>
+              <li class="d-lg-none">
+                <a class="dropdown-item btn border rounded-pill fw-semibold text-center text-navy mb-2" href="login.html" style="color: #1e428a !important; border-color: #d0dbe9 !important;">
+                  Log In
+                </a>
+              </li>
+              <li class="d-lg-none"><hr class="dropdown-divider my-1"></li>
+
+              <!-- COMMON DROPDOWN ITEMS -->
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="#more-info" style="color: #1e428a;">
+                  <i class="bi bi-info-circle text-red"></i> About Us
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="#programs" style="color: #1e428a;">
+                  <i class="bi bi-grid text-red"></i> Programs
+                </a>
+              </li>
+              <li>
+                <!-- LINK TO QUALIFICATIONS SECTION -->
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="#qualifications" style="color: #1e428a;">
+                  <i class="bi bi-check-circle text-red"></i> Qualifications
+                </a>
+              </li>
+              <li>
+                <!-- LINK TO PROCESSES SECTION -->
+                <a class="dropdown-item fw-semibold py-2 text-navy d-flex align-items-center gap-2" href="#processes" style="color: #1e428a;">
+                  <i class="bi bi-diagram-3 text-red"></i> Processes
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO MAIN CONTENT -->
+    <div class="container text-center py-4 my-auto">
+      <!-- City Seal / Emblem -->
+      <div class="mb-2">
+        <img src="photos/metro-peso-seal.png" alt="Metro Peso Seal" width="45" height="45" />
+      </div>
+
+      <p class="text-uppercase text-navy fw-bold tracking-wide mb-1" style="font-size: 0.65rem; letter-spacing: 2px;">
+        PUBLIC EMPLOYMENT SERVICE OFFICE
+      </p>
+
+      <!-- Sub-heading -->
+      <p class="text-uppercase text-navy fw-bold tracking-wide mb-4" style="font-size: 0.85rem; letter-spacing: 2px;">
+        CITY GOVERNMENT OF NAGA
+      </p>
+
+      <!-- Main Titles -->
+      <h1 class="display-3 fw-black text-navy fw-extrabold text-uppercase mb-0" style="font-weight: 900;">
+        YOUTH EMPLOYMENT
+      </h1>
+      <h1 class="display-3 fw-black text-red fw-extrabold text-uppercase mb-3" style="font-weight: 900;">
+        PROGRAM
+      </h1>
+
+      <!-- Open Status Badge -->
+      <div class="d-inline-block btn-badge px-4 py-2 mb-4 shadow-sm">
+        SPES & SEFE — 2026 Application Now Open
+      </div>
+
+      <!-- Description Paragraph -->
+      <p class="text-secondary mx-auto mb-4" style="max-width: 650px; font-size: 0.95rem;">
+        Providing work opportunities to poor but deserving students, out-of-school youth (OSY), 
+        and dependents of displaced or low-income workers across Naga City.
+      </p>
+
+      <!-- Call To Action Buttons -->
+      <div class="d-flex flex-sm-row flex-column justify-content-center align-items-center gap-3">
+        <a href="registration.html" class="btn bg-navy text-white rounded-pill px-4 py-2 fw-semibold d-flex align-items-center gap-2">
+          <i class="bi bi-file-earmark-text"></i> Apply Now / Register <i class="bi bi-chevron-right small"></i>
+        </a>
+        <a href="askApplicationCode.html" target="_blank" class="btn btn-light border rounded-pill px-4 py-2 fw-semibold text-navy bg-white">
+          <i class="bi bi-bar-chart-steps me-1"></i> Track My Application
+        </a>
+      </div>
+    </div>
+
+    <!-- GRADIENT TRANSITION CONTAINER FOR QUICK LINK CARDS -->
+    <div class="hero-transition-gradient">
+      <div class="container">
+        <div class="row g-2 justify-content-center">
+          <div class="col-6 col-md-3">
+            <a href="#more-info" class="hero-nav-card">
+              <span class="card-icon-arrow">&larr;</span>
+              <div class="lh-sm">
+                <div class="fw-bold text-navy" style="font-size: 0.85rem;">About Us</div>
+                <div class="text-muted" style="font-size: 0.7rem;">Learn more about our purpose.</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="#programs" class="hero-nav-card">
+              <span class="card-icon-arrow">&larr;</span>
+              <div class="lh-sm">
+                <div class="fw-bold text-navy" style="font-size: 0.85rem;">Programs</div>
+                <div class="text-muted" style="font-size: 0.7rem;">What can you avail under YEP?</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- QUALIFICATIONS PILL -->
+          <div class="col-6 col-md-3">
+            <a href="#qualifications" class="hero-nav-card">
+              <span class="card-icon-arrow">&larr;</span>
+              <div class="lh-sm">
+                <div class="fw-bold text-navy" style="font-size: 0.85rem;">Qualifications</div>
+                <div class="text-muted" style="font-size: 0.7rem;">Know what you need to qualify.</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- PROCESSES PILL -->
+          <div class="col-6 col-md-3">
+            <a href="#processes" class="hero-nav-card">
+              <span class="card-icon-arrow">&larr;</span>
+              <div class="lh-sm">
+                <div class="fw-bold text-navy" style="font-size: 0.85rem;">Processes</div>
+                <div class="text-muted" style="font-size: 0.7rem;">From Registration to Employment.</div>
+              </div>
+            </a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ABOUT US / METRO PESO & YEP SECTION (THREE CIRCLE BADGE) -->
+<section id="more-info" class="bg-light py-5">
+  <div class="container py-4">
+    <div class="row align-items-center gy-5">
+      
+      <!-- LEFT COLUMN: OVERLAPPING CIRCLE GRAPHIC -->
+      <div class="col-lg-5 col-md-10 mx-auto">
+        <div class="circle-badge-container">
+          <!-- Background Layer Circles -->
+          <div class="circle-red"></div>
+          <div class="circle-yellow"></div>
+          <div class="circle-blue"></div>
+
+          <!-- Foreground White Content Circle -->
+          <div class="circle-white-content">
+            <span class="text-red text-uppercase fw-semibold mb-1" style="letter-spacing: 1.5px; font-size: 0.75rem;">
+              READ
+            </span>
+            <!-- REVISED: Increased font-weight for Metropolitan Naga title -->
+            <h2 class="fw-black text-navy h5 mb-2" style="font-size: 0.95rem; line-height: 1.3; font-weight: 800;">
+              Metropolitan Naga Public Employment Office
+            </h2>
+            <p class="text-secondary small mb-0" style="font-size: 0.7rem; line-height: 1.4;">
+              The Metropolitan Public Employment Service Office (Metro PESO) of Naga City serves as the primary gateway for Nagueños to access meaningful employment opportunities, career guidance, and workforce development initiatives. Operating under its Manpower Development and Placement Division, Metro PESO is dedicated to empowering the local community by bridging the gap between job seekers, students, and public or private opportunities across the city.
+            </p>
+            <div class="blue-divider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: YEP SECTION CONTENT & IMAGES -->
+      <div class="col-lg-7">
+        <div class="ps-lg-3">
+          
+          <!-- REVISED: Added w-100 and justify-content-between to push the red block to the far right edge -->
+          <!-- HTML (homepage.md) -->
+          <!-- HTML (homepage.md) -->
+<!-- REVISED: text-end right-aligns the heading and moves it away from the left circle graphic -->
+          <h2 class="fw-bold text-navy mb-3 text-end" style="font-size: 1.4rem;">
+            <span>Empowering the Youth: The Youth Employment Program</span>
+            <span class="accent-block-red"></span>
+          </h2>
+
+          <!-- Paragraph Text -->
+          <p class="text-secondary mb-4" style="font-size: 0.88rem; line-height: 1.6; text-align: justify;">
+            To directly support the younger generation of Nagueños, Metro PESO spearheads the Youth Employment Program (YEP). YEP serves as the overarching umbrella initiative designed to provide temporary employment, educational assistance, and hands-on professional exposure to deserving youth across Naga City. Through strategic partnerships with City Hall departments, barangay units, and partner offices, YEP equips young workers with essential workplace skills while helping ease the financial burden of their education.
+          </p>
+
+          <!-- 3-Image Gallery Row -->
+          <div class="row g-3">
+            <div class="col-4">
+              <img src="photos/ACTIVITIES/ACT1.jpg" alt="YEP Activity 1" class="yep-img-card">
+            </div>
+            <div class="col-4">
+              <img src="photos/ACTIVITIES/ACT2.png" alt="YEP Activity 2" class="yep-img-card">
+            </div>
+            <div class="col-4">
+              <img src="photos/ACTIVITIES/ACT3.png" alt="YEP Activity 3" class="yep-img-card">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- ==========================================
+       3. PROGRAMS OFFERED SECTION
+       ========================================== -->
+  <section id="programs" class="programs-section py-5">
+    <div class="container py-4">
+      
+      <!-- SECTION HEADER -->
+      <div class="text-center mb-5">
+        <p class="text-uppercase text-red fw-bold mb-1" style="font-size: 0.8rem; letter-spacing: 2px;">
+          WHAT YOU CAN AVAIL WITH YEP
+        </p>
+        <h2 class="display-6 fw-black text-navy fw-extrabold text-uppercase mb-2" style="font-weight: 900;">
+          PROGRAMS <span class="text-red">OFFERED</span>
+        </h2>
+        <p class="text-secondary small mx-auto" style="max-width: 550px; font-size: 0.9rem;">
+          Two programs designed to provide temporary employment and financial assistance to deserving youth across Naga City.
+        </p>
+      </div>
+
+      <!-- PROGRAM CARDS (STAGGERED ON LARGE, EQUAL ON MEDIUM) -->
+      <div class="row g-4 justify-content-center align-items-stretch mb-4">
+        
+        <!-- SEFE CARD -->
+        <div class="col-lg-5 col-md-6 d-flex">
+          <div class="card program-card sefe-card h-100 shadow-lg border-0 p-4">
+            <h3 class="fw-bold text-navy h2 mb-1" style="font-weight: 800;">SEFE</h3>
+            <p class="fw-semibold text-navy small mb-3">Summer Employment for Enrollment</p>
+            
+            <p class="text-muted small mb-4" style="font-size: 0.82rem; line-height: 1.5;">
+              SEFE provides temporary employment to qualified students during school breaks, helping them earn income to prepare for the upcoming academic year.
+            </p>
+
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0 mt-auto" style="font-size: 0.82rem;">
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-warning fs-6"></i>
+                <span class="text-secondary fw-medium">For high school and college students</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-warning fs-6"></i>
+                <span class="text-secondary fw-medium">Short-term summer employment opportunities</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-warning fs-6"></i>
+                <span class="text-secondary fw-medium">Hands-on experience in government offices</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-warning fs-6"></i>
+                <span class="text-secondary fw-medium">Stipend based on current city guidelines</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SPES CARD -->
+        <div class="col-lg-5 col-md-6 d-flex">
+          <div class="card program-card spes-card h-100 shadow-lg border-0 p-4">
+            <h3 class="fw-bold text-navy h2 mb-1" style="font-weight: 800;">SPES</h3>
+            <p class="fw-semibold text-navy small mb-3">Special Program for Employment of Students</p>
+            
+            <p class="text-muted small mb-4" style="font-size: 0.82rem; line-height: 1.5;">
+              SPES provides temporary employment to qualified students, helping them gain work experience, develop skills, and support their education.
+            </p>
+
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0 mt-auto" style="font-size: 0.82rem;">
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-red fs-6"></i>
+                <span class="text-secondary fw-medium">For high school and college students</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-red fs-6"></i>
+                <span class="text-secondary fw-medium">Short-term employment opportunities</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-red fs-6"></i>
+                <span class="text-secondary fw-medium">Hands-on experience in government offices</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-red fs-6"></i>
+                <span class="text-secondary fw-medium">Stipend based on current guidelines</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- NOTE PILL BANNER -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+          <div class="bg-white rounded-pill px-4 py-2 shadow-sm d-flex align-items-center gap-2 text-start">
+            <i class="bi bi-info-circle-fill text-navy fs-5 flex-shrink-0"></i>
+            <span class="text-muted" style="font-size: 0.75rem; line-height: 1.3;">
+              <strong class="text-navy">Note:</strong> Both programs require physical submission of documentary requirements at the <strong>Metro PESO Office, City Hall, Naga City</strong>. Online document submission is not accepted.
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLUE FOOTER BANNER (RESPONSIVE & MOBILE-FRIENDLY) -->
+<div class="bg-navy py-3 px-3 text-center text-white w-100 position-relative" style="z-index: 10;">
+  <span class="fw-light d-inline-block" style="font-size: clamp(0.8rem, 2.5vw, 0.9rem); line-height: 1.4;">
+    Interested? Click here to <a href="#" class="text-white fw-bold text-decoration-underline ms-1">Register</a>.
+  </span>
+</div>
+
+ <!-- QUALIFICATIONS SECTION WITH COLLAPSIBLE BULLET LISTS -->
+<section id="qualifications" class="qualifications-section py-5">
+  <div class="container py-4 position-relative" style="z-index: 2;">
+    
+    <!-- SECTION HEADER -->
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-red fw-bold mb-1" style="font-size: 0.8rem; letter-spacing: 2px;">
+        QUALIFICATIONS
+      </p>
+      <h2 class="display-6 fw-black text-navy fw-extrabold text-uppercase mb-2" style="font-weight: 900;">
+        CHECK IF YOU <span style="color: #43a047;">QUALIFY</span>
+      </h2>
+      <p class="text-secondary small mx-auto" style="max-width: 550px; font-size: 0.9rem;">
+        Review the eligibility requirements and disqualification grounds before applying.
+      </p>
+    </div>
+
+    <!-- ELIGIBILITY & DISQUALIFICATION CARDS GRID -->
+    <div class="row g-4 justify-content-center align-items-start mb-4">
+      
+      <!-- LEFT CARD: WHO CAN APPLY? -->
+      <div class="col-lg-5 col-md-6">
+        <div class="qual-card qual-card-blue w-100">
+          
+          <!-- Card Header & Toggle Row -->
+          <div class="qual-header-blue p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <div class="icon-badge-blue d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="bi bi-people-fill fs-5"></i>
+              </div>
+              <div>
+                <h3 class="fw-bold text-navy h6 mb-0">Who Can Apply?</h3>
+                <span class="text-muted" style="font-size: 0.72rem;">Eligibility criteria for SPES & SEFE as of 2026</span>
+              </div>
+            </div>
+
+            <!-- Dropdown Toggle Button -->
+            <button class="btn qual-toggle-btn qual-toggle-btn-blue collapsed d-flex align-items-center gap-1 flex-shrink-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#whoCanApplyList" aria-expanded="false" aria-controls="whoCanApplyList">
+              <span>View List</span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+          </div>
+
+          <!-- Collapsible Criteria List -->
+          <div class="collapse" id="whoCanApplyList">
+            <div class="p-3 bg-white">
+              <ul class="list-unstyled mb-0" style="font-size: 0.83rem;">
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">Enrolled or incoming Grade 12, 1st-year college, or higher college students</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">Out-of-School Youth (OSY)</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">Dependents of low-income or displaced workers</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">Family income does not exceed ₱146,766 per year</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">GWA of 85% or higher with no failing grades</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">Financial aid does not exceed ₱5,000 per semester</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-check-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-check-lg"></i></span>
+                  <span class="text-secondary">Aged 18–30 (priority, especially solo parent or PWD dependents)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT CARD: DISQUALIFICATION GROUNDS -->
+      <div class="col-lg-5 col-md-6">
+        <div class="qual-card qual-card-red w-100">
+          
+          <!-- Card Header & Toggle Row -->
+          <div class="qual-header-red p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <div class="icon-badge-red d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="bi bi-x-circle-fill fs-5"></i>
+              </div>
+              <div>
+                <h3 class="fw-bold text-red h6 mb-0">Disqualification Grounds</h3>
+                <span class="text-muted" style="font-size: 0.72rem;">Applicants disqualified if they:</span>
+              </div>
+            </div>
+
+            <!-- Dropdown Toggle Button -->
+            <button class="btn qual-toggle-btn qual-toggle-btn-red collapsed d-flex align-items-center gap-1 flex-shrink-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#disqualificationList" aria-expanded="false" aria-controls="disqualificationList">
+              <span>View List</span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+          </div>
+
+          <!-- Collapsible Disqualification List -->
+          <div class="collapse" id="disqualificationList">
+            <div class="p-3 bg-white">
+              <ul class="list-unstyled mb-0" style="font-size: 0.83rem;">
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-cross-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-x-lg"></i></span>
+                  <span class="text-secondary">Drop any subject during the program period</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-cross-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-x-lg"></i></span>
+                  <span class="text-secondary">Receive non-RA 10931 financial aid exceeding ₱5,000/semester</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-cross-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-x-lg"></i></span>
+                  <span class="text-secondary">Are graduating college students </span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-cross-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-x-lg"></i></span>
+                  <span class="text-secondary">Are enrolled in summer classes or OJT</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-cross-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-x-lg"></i></span>
+                  <span class="text-secondary">Fail to submit complete requirements before the deadline</span>
+                </li>
+                <li class="qual-list-item d-flex align-items-start gap-2">
+                  <span class="qual-cross-icon d-flex align-items-center justify-content-center flex-shrink-0 mt-1"><i class="bi bi-x-lg"></i></span>
+                  <span class="text-secondary">Have another family member currently enrolled in the program</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VIEW REQUIREMENTS DROPDOWN TOGGLE BUTTON -->
+    <div class="d-flex flex-column align-items-center mt-4">
+      <button class="btn requirements-pill-btn collapsed d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#requirementsDropdown" aria-expanded="false" aria-controls="requirementsDropdown">
+        <span class="mx-auto ps-3">View Requirements</span>
+        <i class="bi bi-chevron-down fs-5"></i>
+      </button>
+
+      <!-- COLLAPSIBLE REQUIREMENTS CONTENT BOX -->
+      <div class="collapse w-100 max-w-lg mt-3" id="requirementsDropdown" style="max-width: 750px;">
+        <div class="card card-body border-0 shadow-lg rounded-4 p-4 text-start">
+          <h4 class="fw-bold text-navy h6 mb-3 border-bottom pb-2">
+            <i class="bi bi-file-earmark-check-fill text-red me-2"></i>Documentary Requirements Checklist
+          </h4>
+          <div class="row g-3" style="font-size: 0.85rem;">
+            <div class="col-md-6">
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                <li class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-text text-navy"></i>
+                  <span>Duly accomplished SPES / SEFE Application Form</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-text text-navy"></i>
+                  <span>PSA Birth Certificate / Local Civil Registry Copy</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-text text-navy"></i>
+                  <span>Form 138 (Report Card) or Official Transcript of Records (GWA of at least 85%)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                <li class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-text text-navy"></i>
+                  <span>Barangay Certificate of Indigency</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-text text-navy"></i>
+                  <span>Parents' Income Tax Return (ITR) or Tax Exemption Certificate</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-text text-navy"></i>
+                  <span>Certificate of Non-Receipt of Financial Aid exceeding ₱5,000</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- APPLICATION PROCESS SECTION -->
+<section id="processes" class="processes-section py-5">
+  <div class="container py-4">
+    
+    <!-- SECTION HEADER -->
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-red fw-bold mb-1" style="font-size: 0.8rem; letter-spacing: 2px;">
+        HOW IT WORKS
+      </p>
+      <h2 class="display-6 fw-black text-navy fw-extrabold text-uppercase mb-2" style="font-weight: 900;">
+        APPLICATION <span class="text-red">PROCESS</span>
+      </h2>
+      <p class="text-secondary small mx-auto" style="max-width: 550px; font-size: 0.9rem;">
+        Follow these six steps from registration through payroll and certification.
+      </p>
+    </div>
+
+    <!-- MAIN PROCESS CARD CONTAINER -->
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        <div class="process-main-card">
+          
+          <!-- NAVY HEADER BANNER -->
+          <div class="process-header-banner text-white">
+            <h3 class="fw-bold mb-1 text-uppercase" style="font-size: 1.25rem; letter-spacing: 0.5px;">
+              REGISTRATION & DEPLOYMENT <span style="color: #f2b738;">STEPS</span>
+            </h3>
+            <p class="mb-0 text-white-50 small" style="font-size: 0.85rem;">
+              Complete all six stages to be successfully placed in an office assignment.
+            </p>
+          </div>
+
+          <!-- STEPS TIMELINE BODY -->
+          <div class="p-4 p-md-5">
+            <div class="timeline-container">
+              
+              <!-- Connecting Horizontal Line (Desktop) -->
+              <div class="timeline-connecting-line d-none d-lg-block"></div>
+
+              <!-- 6 STEPS GRID -->
+              <div class="row g-4 text-center justify-content-center">
+                
+                <!-- STEP 01 -->
+                <div class="col-lg-2 col-md-4 col-6 step-node">
+                  <div class="step-circle bg-step-blue">01</div>
+                  <h4 class="fw-bold text-step-blue h6 mb-1">Registration</h4>
+                  <p class="text-muted mb-0" style="font-size: 0.72rem; line-height: 1.3;">
+                    Create your applicant account
+                  </p>
+                </div>
+
+                <!-- STEP 02 -->
+                <div class="col-lg-2 col-md-4 col-6 step-node">
+                  <div class="step-circle bg-step-blue">02</div>
+                  <h4 class="fw-bold text-step-blue h6 mb-1">Submit Documents</h4>
+                  <p class="text-muted mb-0" style="font-size: 0.72rem; line-height: 1.3;">
+                    Provide the required records
+                  </p>
+                </div>
+
+                <!-- STEP 03 -->
+                <div class="col-lg-2 col-md-4 col-6 step-node">
+                  <div class="step-circle bg-step-yellow">03</div>
+                  <h4 class="fw-bold text-step-yellow h6 mb-1">Verification & Screening</h4>
+                  <p class="text-muted mb-0" style="font-size: 0.72rem; line-height: 1.3;">
+                    PESO reviews your eligibility
+                  </p>
+                </div>
+
+                <!-- STEP 04 -->
+                <div class="col-lg-2 col-md-4 col-6 step-node">
+                  <div class="step-circle bg-step-yellow">04</div>
+                  <h4 class="fw-bold text-step-yellow h6 mb-1">Office Assignment</h4>
+                  <p class="text-muted mb-0" style="font-size: 0.72rem; line-height: 1.3;">
+                    Get matched with an office
+                  </p>
+                </div>
+
+                <!-- STEP 05 -->
+                <div class="col-lg-2 col-md-4 col-6 step-node">
+                  <div class="step-circle bg-step-green">05</div>
+                  <h4 class="fw-bold text-step-green h6 mb-1">Deployment</h4>
+                  <p class="text-muted mb-0" style="font-size: 0.72rem; line-height: 1.3;">
+                    Begin your work placement
+                  </p>
+                </div>
+
+                <!-- STEP 06 -->
+                <div class="col-lg-2 col-md-4 col-6 step-node">
+                  <div class="step-circle bg-step-green">06</div>
+                  <h4 class="fw-bold text-step-green h6 mb-1">Payroll & Certification</h4>
+                  <p class="text-muted mb-0" style="font-size: 0.72rem; line-height: 1.3;">
+                    Complete payroll and clearance
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- NOTE BANNER AT BOTTOM OF CARD -->
+            <div class="mt-5">
+              <div class="rounded-4 p-3 d-flex align-items-center gap-3 text-start" style="background-color: #ebf3fa; border: 1px solid #d0e2f3;">
+                <div class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 32px; height: 32px;">
+                  <i class="bi bi-info-circle-fill fs-6"></i>
+                </div>
+                <span class="text-secondary" style="font-size: 0.78rem; line-height: 1.4;">
+                  <strong class="text-navy">Note:</strong> All documentary requirements must be submitted <strong>in person</strong> at the Metro PESO Office, City Hall, Naga City. Keep your application reference number for status tracking.
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- CALL TO ACTION SECTION WITH HERO BACKGROUND PHOTO -->
+    <section class="cta-light-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            
+            <!-- Standardized Section Sub-Tagline -->
+            <p class="text-uppercase text-red fw-bold mb-1" style="font-size: 0.8rem; letter-spacing: 2px;">
+              JOIN US TODAY
+            </p>
+
+            <!-- Standardized Uppercase Heading -->
+            <h2 class="display-6 fw-black text-navy fw-extrabold text-uppercase mb-2" style="font-weight: 900;">
+              WHAT ARE YOU <span class="text-navy">WAITING FOR?</span>
+            </h2>
+
+            <!-- Subheading -->
+            <h3 class="fw-bold text-navy h6 mb-3" style="font-weight: 800; letter-spacing: 0.2px;">
+              Empower Your Education. Serve Naga City.
+            </h3>
+
+            <!-- Description Paragraph -->
+            <p class="text-secondary mx-auto mb-4" style="max-width: 580px; font-size: 0.9rem; line-height: 1.6;">
+              Join hundreds of NagenYouths gaining real-world experience across city offices and local communities.
+            </p>
+
+            <!-- CTA Button -->
+            <div class="mb-3">
+              <a href="#" class="btn btn-cta-navy">
+                <span>Get Started Today</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </a>
+            </div>
+
+            <!-- Hashtag Badge -->
+            <div>
+              <span class="badge cta-hashtag-pill rounded-pill px-3 py-2">
+                #BastaNagenYouthMatibay
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="container">
+    
+    <!-- 4-COLUMN FOOTER NAVIGATION GRID -->
+    <div class="row g-4 justify-content-between">
+      
+      <!-- COLUMN 1: METRO PESO NAGA -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Metro PESO Naga</h4>
+        <p class="footer-text mb-0">
+          Metropolitan Public Employment Service Office<br>
+          City Hall, Naga City, Camarines Sur
+        </p>
+      </div>
+
+      <!-- COLUMN 2: CONTACT -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Contact</h4>
+        <p class="footer-text mb-0">
+          Tel: (054) 473-0001<br>
+          Email: peso@naga.gov.ph<br>
+          Office Hours: Mon–Fri, 8AM–5PM
+        </p>
+      </div>
+
+      <!-- COLUMN 3: PROGRAMS -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Programs</h4>
+        <p class="footer-text mb-0">
+          Special Program for Employment of Students (SPES)<br>
+          Summer Employment for Enrollment (SEFE)
+        </p>
+      </div>
+
+      <!-- COLUMN 4: QUICK LINKS -->
+      <div class="col-lg-2 col-md-6">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="list-unstyled footer-links d-flex flex-column gap-2 mb-0">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Log In</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- HORIZONTAL DIVIDER LINE -->
+    <div class="footer-divider"></div>
+
+    <!-- BOTTOM COPYRIGHT & STUDENT DISCLAIMER -->
+    <div class="text-center">
+      <p class="footer-copyright mb-1">
+        © 2026 MetroSEED-Naga · Metropolitan Public Employment Service Office, Naga City
+      </p>
+      <p class="footer-disclaimer mb-0">
+        <i class="bi bi-info-circle me-1"></i><strong>Disclaimer:</strong> This is an educational project created by students as a static web design demonstration. It is not an official portal of the City Government of Naga.
+      </p>
+    </div>
+
+  </div>
+</footer>
+   
+</body>
+</html>
